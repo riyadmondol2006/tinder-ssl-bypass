@@ -3,7 +3,7 @@
 [![Frida](https://img.shields.io/badge/Frida-SSL%20Bypass-red)](https://frida.re/)
 [![Android](https://img.shields.io/badge/Android-7.0%2B-green)](https://developer.android.com/)
 [![License](https://img.shields.io/badge/License-Educational-blue)](https://github.com)
-[![Downloads](https://img.shields.io/badge/Downloads-10k%2B-brightgreen)](https://github.com)
+[![Downloads](https://img.shields.io/badge/Downloads-1k%2B-brightgreen)](https://github.com)
 
 **🚀 The Ultimate Tinder SSL Certificate Pinning Bypass Script for Android Security Research**
 
@@ -72,26 +72,22 @@ git clone https://github.com/riyadmondol2006/tinder-ssl-bypass.git
 cd tinder-ssl-bypass
 
 # Direct usage (Recommended)
-frida -U -f com.tinder -l tinder_bypass.js 
-
-# Alternative: Make the runner script executable
-chmod +x run_script.sh
-./run_script.sh
+frida -U -f com.tinder -l tinder_bypass.js
 ```
 
 ### Direct Usage (Recommended)
 ```bash
 # Method 1: Spawn new Tinder instance (Most Effective)
-frida -U -f com.tinder -l tinder_bypass.js --no-pause
+frida -U -f com.tinder -l tinder_bypass.js
 
 # Method 2: Attach to running Tinder app
 frida -U com.tinder -l tinder_bypass.js
 
 # Method 3: Debug mode with verbose output
-frida -U -f com.tinder -l tinder_bypass.js --no-pause --runtime=v8 --debug
+frida -U -f com.tinder -l tinder_bypass.js --runtime=v8 --debug
 
-# Method 4: With custom timeout
-frida -U -f com.tinder -l tinder_bypass.js --no-pause --kill-on-exit
+# Method 4: With custom timeout and kill on exit
+frida -U -f com.tinder -l tinder_bypass.js --kill-on-exit
 ```
 
 ---
@@ -234,8 +230,8 @@ System.getProperty.implementation = function(property) {
 
 **App crashes on startup:**
 ```bash
-# Solution: Use --no-pause flag
-frida -U -f com.tinder -l tinder_bypass.js --no-pause
+# Solution: Try attaching to running app instead
+frida -U com.tinder -l tinder_bypass.js
 ```
 
 **Script not loading:**
@@ -385,70 +381,5 @@ Looking for freelance projects in:
 
 ---
 
-## 📊 Statistics
-
-### Downloads & Usage
-- **Total Downloads:** 10,000+
-- **GitHub Stars:** 500+
-- **Success Rate:** 95%+
-- **Supported Versions:** 50+
-
-### Community
-- **Active Users:** 1,000+
-- **Contributors:** 20+
-- **Issues Resolved:** 200+
-- **Community Support:** 24/7
-
----
-
-## 🏷️ Tags & Keywords
-
-**Primary Keywords:**
-`tinder ssl bypass`, `frida ssl pinning`, `android ssl bypass`, `tinder proxy bypass`, `mobile security testing`
-
-**Secondary Keywords:**
-`ssl certificate pinning bypass`, `tinder traffic interception`, `android reverse engineering`, `mobile app security`, `frida android script`, `tinder api analysis`, `ssl pinning removal`, `mobile penetration testing`
-
-**Technical Keywords:**
-`okhttp3 bypass`, `volley ssl bypass`, `android network security`, `frida scripting`, `mobile security research`, `android debugging`, `ssl verification bypass`, `certificate validation bypass`
-
----
-
-## 📄 License
-
-This project is licensed under the **Educational Use License** - see the [LICENSE](LICENSE) file for details.
-
-### Usage Rights
-- ✅ Educational and research purposes
-- ✅ Security testing with proper authorization
-- ✅ Learning and skill development
-- ❌ Commercial use without permission
-- ❌ Malicious activities
-- ❌ Unauthorized access
-
----
-
-## 🌟 Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=yourusername/tinder-ssl-bypass&type=Date)](https://star-history.com/#yourusername/tinder-ssl-bypass&Date)
-
----
-
-## 🎉 Show Your Support
-
-If this tool helped you in your security research or learning journey, please:
-
-- ⭐ **Star this repository**
-- 🔄 **Share with your network**
-- 📢 **Follow on Telegram:** [@reversesio](https://t.me/reversesio)
-- 💬 **Join the community discussion**
-- 🤝 **Contribute improvements**
-
----
-
 **Made with ❤️ by [Riyad Mondol](https://t.me/riyadmondol2006)**  
 **For the security research community 🔒**
-
----
-
-*Keywords: tinder ssl bypass, frida ssl pinning, android ssl bypass, tinder proxy bypass, mobile security testing, ssl certificate pinning bypass, tinder traffic interception, android reverse engineering, mobile app security, frida android script, tinder api analysis, ssl pinning removal, mobile penetration testing, android security research, mobile app reverse engineering*
